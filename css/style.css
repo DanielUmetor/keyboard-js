@@ -1,0 +1,126 @@
+/* Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #121212; /* Dark background */
+    font-family: 'Roboto', sans-serif;
+}
+
+/* Keyboard container */
+.keyboard-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Display for showing the typed word */
+.display {
+    width: 100%;
+    padding: 20px;
+    margin-bottom: 20px;
+    background-color: #1e1e1e; /* Darker display area */
+    color: #00ffab; /* Neon green text */
+    text-align: center;
+    font-size: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+/* Keyboard layout */
+.keyboard {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.row {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+/* Key button styles */
+.key {
+    width: 60px;
+    height: 60px;
+    background-color: #333; /* Dark button background */
+    color: #fff; /* White text on keys */
+    font-size: 1.5rem;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: transform 0.2s ease, background-color 0.2s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.4);
+}
+
+/* Backspace button styling */
+.backspace {
+    width: 100px;
+    font-size: 1.2rem;
+}
+
+/* Key hover and active effects */
+.key:hover {
+    background-color: #444; /* Slightly lighter on hover */
+    transform: translateY(-5px); /* Hover lift effect */
+}
+
+.key:active {
+    background-color: #555; /* Even lighter when pressed */
+    transform: translateY(0); /* Press down effect */
+}
+
+/* Animation when key is pressed */
+.key.pressed {
+    animation: pressEffect 0.2s forwards;
+}
+
+/* Key press animation */
+@keyframes pressEffect {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(0.9); /* Slight press down animation */
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+/* Rest of the styles remain the same */
+
+/* Space key styling */
+.space {
+    width: 400px; /* Wider spacebar */
+    height: 60px;
+    background-color: #333; /* Same dark theme */
+    color: #fff;
+    font-size: 1.5rem;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: transform 0.2s ease, background-color 0.2s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.4);
+    text-align: center;
+}
+
+/* Space hover effect */
+.space:hover {
+    background-color: #444; /* Hover effect for spacebar */
+    transform: translateY(-5px);
+}
+
+.space:active {
+    background-color: #555; /* Press effect */
+}
